@@ -1,0 +1,62 @@
+# Deep Reinforcement Learning for Multi-Echelon Supply Chain Optimization
+
+This is a tutorial on multi-echelon inventory optimization (MEIO) using reinforcement learning. We define an environment with a factory and several warehouses and show how the Deep Deterministic Policy Gradient (DDPG) algorithm can be used to implement the production and replenishment policy.
+
+(This tutorial was transfered from .ipynb to .py and slightly updated by Antoine Germain (agermain@mit.edu) in July 2024. All credits go to the original author. Here is the original .ipynb document, also contained in this folder:)
+
+https://github.com/ikatsov/tensor-house/blob/master/supply-chain/supply-chain-reinforcement-learning.ipynb
+
+### Apache License 2.0
+ikatsov/tensor-house is licensed under the Apache License 2.0
+
+"*A permissive license whose main conditions require preservation of copyright and license notices. Contributors provide an express grant of patent rights. Licensed works, modifications, and larger works may be distributed under different terms and without source code*."
+
+https://github.com/ikatsov/tensor-house/blob/master/LICENSE
+
+### Data
+We use an internal simulator. No external datasets are used.
+
+### References
+1. Kemmer L., et al. -- Reinforcement learning for supply chain optimization, 2018
+
+
+
+# Run the file
+
+To run the file, please follow these steps using a bash terminal and making MEIO your working folder:
+
+### Conda environment and rllib-ddpg
+
+Type the following lines one by one in your bash terminal:
+
+```
+conda create -n rllib-ddpg python=3.10
+conda activate rllib-ddpg
+cd ddpg
+pip install -r requirements.txt
+pip install -e '.[development]'
+cd ..
+```
+
+If you get a message telling you "CondaError: Run 'conda init' before 'conda activate'", you might need to write 
+```
+source activate base
+``` 
+before activating the rllib-ddpg folder.
+
+### Other libraries
+```
+pip install qbstyles ray[rllib] ax-platform
+pip install seaborn
+pip install pandas
+conda uninstall pytorch
+conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+```
+
+### Running the code
+
+```
+python MEIO.py
+```
+
+!ls -la /root/ray_results/DDPG_SimpleSupplyChain_2023-04-28_13-48-214c5hqra0/checkpoint_000200
