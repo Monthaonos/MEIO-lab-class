@@ -343,7 +343,6 @@ def train_ddpg():
 
 
 checkpoint_dir=train_ddpg()
-checkpoint_dir=checkpoint_dir[:-18]
 
 import json
 # checkpoint_dir = cwd+'/ray_results/DDPG_SimpleSupplyChain_test/'
@@ -360,10 +359,8 @@ algo = (
   .build()
 )
 
-def load_policy():
-    log_dir = checkpoint_dir # this path can be changed manually, by default should be the last checkpoint_dir set in the cell above. 
-    checkpoint_id = "000010"
-    algo.restore(f"{log_dir}/checkpoint_{checkpoint_id}/")
+def load_policy(): 
+    algo.restore(checkpoint_dir)
     return algo.get_policy()
 
 policy = load_policy()
