@@ -3,7 +3,7 @@ https://github.com/Monthaonos/MEIO-lab-class
 
 This is a tutorial on multi-echelon inventory optimization (MEIO) using reinforcement learning. We define an environment with a factory and several warehouses and show how the Deep Deterministic Policy Gradient (DDPG) algorithm can be used to implement the production and replenishment policy.
 
-(This tutorial was transfered from .ipynb to .py and slightly updated by Antoine Germain (agermain@mit.edu) in July 2024. All credits go to the original author. Here is the original .ipynb document, which has been modified in this folder:)
+(This tutorial was transfered from .ipynb to .py and updated by Antoine Germain (agermain@mit.edu) in July 2024. All credits go to the original author. Here is the original .ipynb document, which has been modified in this folder:)
 
 https://github.com/ikatsov/tensor-house/blob/master/supply-chain/supply-chain-reinforcement-learning.ipynb
 
